@@ -19,8 +19,9 @@
     "baseUrl": "./src",
     "paths": {
       "api": ["api/*"],
+      "entity": ["entity/*"],
       "services": ["services/*"],
-      "models": ["models/*"],
+      "utils": ["utils/*"]
     },
     "typeRoots": ["./node_modules/@types"]
   },

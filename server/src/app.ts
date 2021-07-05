@@ -4,11 +4,17 @@ import logger from 'utils/logger'
 
 dotenv.config()
 
-const app = express();
-const PORT = process.env.PORT;
+function app(): express.Application {
+  const app = express();
+  const PORT = process.env.PORT;
 
-app.get('/', (req, res) => res.send('Express + TypeScript Server'));
+  app.get('/', (req, res) => res.send('Express + TypeScript Server'))
 
-app.listen(PORT, () => {
-  logger.info(`⚡️[server]: Server is running at https://localhost:${PORT}`)
-})
+  app.listen(PORT, () => {
+    logger.info(`⚡️[server]: Server is running at https://localhost:${PORT}`)
+  })
+
+  return app
+}
+
+export default app()
