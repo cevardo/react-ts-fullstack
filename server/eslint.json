@@ -1,9 +1,0 @@
-{
-  "defaultSeverity": "error",
-  "extends": ["eslint:recommended"],
-  "jsRules": {},
-  "rules": {
-    "no-console": false
-  },
-  "rulesDirectory": []
-}

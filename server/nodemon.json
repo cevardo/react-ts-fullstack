@@ -1,7 +1,7 @@
 {
   "verbose": true,
-  "watch": ["./src/**/*", "index.ts"],
-  "exec": "tsc",
+  "watch": ["./src/**/*"],
+  "exec": "npx ts-node -r tsconfig-paths/register -T ./src/app.ts",
   "execMap": {
     "ts": "ts-node"
   },

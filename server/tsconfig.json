@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
+    "target": "ES6",
     "module": "CommonJS",
     "moduleResolution": "node",
-    "removeComments": true,
-    "lib": ["es2018", "esnext.asynciterable"],
-    "outDir": "dist",
+    "removeComments": false,
+    "lib": ["ES6", "esnext.asynciterable"],
+    "outDir": "./dist",
+    "rootDir": "./src",
     "allowJs": true,
     "noImplicitAny": true,
     "experimentalDecorators": true,
@@ -19,10 +20,10 @@
     "paths": {
       "api": ["api/*"],
       "services": ["services/*"],
-      "models": ["models/*"]
+      "models": ["models/*"],
     },
     "typeRoots": ["./node_modules/@types"]
   },
-  "exclude": ["./node_modules"],
-  "include": ["./src", "./__test__", "index.ts"]
+  "exclude": ["./node_modules", "./dist"],
+  "include": ["./src", "./src/test", "./src/app.ts"]
 }

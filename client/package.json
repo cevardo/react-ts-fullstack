@@ -1,7 +1,8 @@
 {
-  "name": "tic-tac-toe",
+  "name": "react-ts-boilerplate",
   "version": "0.1.0",
   "private": true,
+  "author": "Chris Evardo",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
