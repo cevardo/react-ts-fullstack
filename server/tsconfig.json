@@ -19,7 +19,7 @@
     "baseUrl": "./src",
     "paths": {
       "api": ["api/*"],
-      "entities": ["entity/*"],
+      "entities": ["entities/*"],
       "services": ["services/*"],
       "utils": ["utils/*"]
     },

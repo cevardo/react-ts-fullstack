@@ -1,20 +1,21 @@
 import express from 'express'
 import dotenv from 'dotenv'
 import logger from 'utils/logger'
+import routes from './api/routes'
+import connectDatabase from 'database'
 
 dotenv.config()
 
-function app(): express.Application {
-  const app = express();
-  const PORT = process.env.PORT;
+const app = express();
+const PORT = process.env.PORT;
 
-  app.get('/', (req, res) => res.send('Express + TypeScript Server'))
+app.use(express.json());
+app.use(routes)
 
-  app.listen(PORT, () => {
-    logger.info(`⚡️[server]: Server is running at https://localhost:${PORT}`)
-  })
+app.listen(PORT, () => {
+  logger.info(`⚡️[server]: Server is running at https://localhost:${PORT}`)
+})
 
-  return app
-}
+connectDatabase().then(conn => conn).catch(error => console.log(error))
 
-export default app()
+export default app
